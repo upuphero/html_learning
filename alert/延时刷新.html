@@ -1,0 +1,44 @@
+setTimeout(
+    function ()
+        {   window.location.reload();
+        }, 3000);
+
+function refresh
+
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>alert</p>
+    <input type="number" id="mynumber" value="">
+    <button onclick="submit()">try it</button>
+    <p id="demo"></p>
+
+
+    <!-- <button onclick="myfunction1()">1</button>
+        <button onclick="myfunction2()">2</button>
+        <button onclick="myfunction3()">3</button>
+        <button onclick="refreshfunction()">refresh</button> -->
+
+
+    <script>
+        function refunction() 
+        {
+            setTimeout(function () {
+                window.location.reload();
+            }, 3000)
+        }
+
+        function submit() {
+            var x = document.getElementById("mynumber").value;
+            document.getElementById("demo").innerHTML = x;
+            if (x == 1) {
+                alert("cmu1 is broken");
+                refunction();
+            }
+        }
+    </script>
+</body>
+
+</html>

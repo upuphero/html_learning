@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>计时器</title>
+    <style type="text/css">
+        input{width: 50px;}
+        div{
+            width: 500px;height: 100px;
+            margin: 100px auto;
+        }
+    </style>
+    <script type="text/javascript">
+        function oldtime(argument) {
+            var oldTime1=new Date();
+            var H=oldTime1.getHours();
+            var M=oldTime1.getMinutes();
+            var S=oldTime1.getSeconds();
+            var Shour=document.getElementById('hour').value;
+            var Smin=document.getElementById('min').value;
+            var Ssec=document.getElementById('sec').value;
+            var time=(Shour*60*60+Smin*60+Ssec)*1000;
+            function tishi() {
+                alert("定时已经到啦，你设定的定时时间为"+Shour+"小时"+Smin+"分钟"+Ssec+"秒，定时开始的时间为"+H+":"+M+":"+S);
+            }
+            setTimeout(tishi,time);
+            
+        }
+    </script>
+</head>
+<body>
+    <div>
+        请输入定时：
+        <input type="num" name=""  placeholder="0" id="hour">小时
+        <input type="num" name=""  placeholder="0" id="min">分钟
+        <input type="num" name=""  placeholder="0" id="sec">秒
+        <input type="submit" name="" value="提交" onclick="oldtime();">
+    </div>
+</body>
+</html>
